@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* ===== Theme variables ===== */
+:root {
+--bg-color: #ffffff;
+--text-color: #111111;
+--card-bg: #ffffff;
+--border-color: rgba(128, 128, 128, 0.15);
+}
+
+html[data-theme="dark"] {
+--bg-color: #000000;
+--text-color: #ffffff;
+--card-bg: #1a1a1a;
+--border-color: rgba(255, 255, 255, 0.12);
+}
+
+body {
+background-color: var(--bg-color);
+color: var(--text-color);
+font-family: 'Lato', sans-serif;
+min-height: 100vh;
+transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 16px 32px;
+}
+
+.nav-links {
+display: flex;
+list-style: none;
+gap: 32px;
+}
+
+.nav-links a {
+color: var(--text-color);
+text-decoration: none;
+font-weight: 500;
+font-size: 17px;
+letter-spacing: 0.3px;
+}
+
+.nav-links a:hover {
+opacity: 0.7;
+}
+
+#theme-toggle {
+background: none;
+border: none;
+border-radius: 50%;
+width: 44px;
+height: 44px;
+font-size: 18px;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--text-color);
+}
+
+#theme-toggle:hover {
+background-color: rgba(128, 128, 128, 0.1);
+}
+
+/* ===== Main content ===== */
+main {
+padding: 0 32px;
+}
+
+/* ===== Hero (logo + text side by side on desktop) ===== */
+.hero-wrapper {
+border-bottom: 1px solid var(--border-color);
+}
+
+.hero {
+display: flex;
+align-items: center;
+gap: 48px;
+padding: 50px 0;
+max-width: 1100px;
+margin: 0 auto;
+}
+
+.hero-logo {
+width: 100%;
+max-width: 320px;
+height: auto;
+flex: 0 0 auto;
+}
+
+.hero-text {
+flex: 1 1 auto;
+}
+
+.eyebrow {
+font-size: 13px;
+font-weight: 700;
+letter-spacing: 1.5px;
+color: var(--text-color);
+text-transform: uppercase;
+opacity: 0.6;
+margin-bottom: 18px;
+}
+
+.hero-text blockquote {
+font-size: 26px;
+font-weight: 400;
+line-height: 1.5;
+color: var(--text-color);
+margin-bottom: 14px;
+}
+
+.hero-text .hours {
+font-size: 14px;
+font-weight: 700;
+color: var(--text-color);
+margin-top: 20px;
+margin-bottom: 4px;
+}
+
+.hero-text .address {
+font-size: 14px;
+font-weight: 400;
+color: var(--text-color);
+opacity: 0.6;
+}
+
+/* ===== CTA button ===== */
+.cta-button {
+display: inline-block;
+margin-top: 24px;
+padding: 13px 30px;
+background-color: var(--text-color);
+color: var(--bg-color);
+border-radius: 999px;
+font-family: 'Lato', sans-serif;
+font-size: 14px;
+font-weight: 700;
+letter-spacing: 0.3px;
+text-decoration: none;
+transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+opacity: 0.85;
+transform: translateY(-2px);
+}
+
+/* ===== Offerings / Cards ===== */
+.offerings {
+display: flex;
+gap: 20px;
+padding: 40px 0 60px;
+max-width: 1100px;
+margin: 0 auto;
+flex-wrap: wrap;
+}
+
+.card {
+background-color: var(--card-bg);
+border: 1px solid var(--border-color);
+border-radius: 12px;
+padding: 0 0 24px;
+flex: 1 1 250px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+overflow: hidden;
+}
+
+.card-img {
+width: 100%;
+height: 160px;
+object-fit: cover;
+display: block;
+margin-bottom: 16px;
+}
+
+.card:hover {
+transform: translateY(-3px);
+box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+font-size: 17px;
+font-weight: 700;
+margin-bottom: 8px;
+color: var(--text-color);
+padding: 0 24px;
+}
+
+.card p {
+font-size: 14px;
+line-height: 1.6;
+color: var(--text-color);
+opacity: 0.75;
+padding: 0 24px;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+border-top: 1px solid var(--border-color);
+padding: 24px 32px;
+text-align: center;
+font-size: 13px;
+color: var(--text-color);
+opacity: 0.5;
+}
+
+/* ===== Mobile: stack logo above text, centered ===== */
+@media (max-width: 700px) {
+.hero {
+flex-direction: column;
+text-align: center;
+padding: 40px 0;
+gap: 24px;
+  }
+
+.hero-logo {
+max-width: 180px;
+  }
+
+.hero-text blockquote {
+font-size: 22px;
+  }
+
+.hero-text .cta-button {
+margin-left: auto;
+margin-right: auto;
+  }
+
+.offerings {
+padding: 30px 0 40px;
+  }
+}
