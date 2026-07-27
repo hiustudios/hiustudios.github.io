@@ -1,0 +1,253 @@
+/* ===== Gallery header ===== */
+.gallery-header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 32px 10px;
+  text-align: center;
+}
+
+.gallery-header h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.gallery-header p {
+  font-size: 15px;
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+/* ===== Search bar ===== */
+.gallery-search {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px 32px 30px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.search-bar::placeholder {
+  color: var(--text-color);
+  opacity: 0.4;
+}
+
+.search-bar:focus {
+  border-color: var(--text-color);
+}
+
+/* ===== Gallery grid ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 32px 60px;
+}
+
+.gallery-item {
+  text-decoration: none;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-color);
+  padding: 16px 20px;
+}
+
+.no-results {
+  text-align: center;
+  font-size: 15px;
+  color: var(--text-color);
+  opacity: 0.6;
+  padding: 0 32px 60px;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 550px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    padding: 10px 20px 40px;
+  }
+
+  .gallery-header {
+    padding: 40px 20px 10px;
+  }
+
+  .gallery-header h1 {
+    font-size: 28px;
+  }
+
+  .gallery-search {
+    padding: 10px 20px 20px;
+  }
+}
+
+/* ===== Artwork detail page ===== */
+.artwork-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 32px 80px;
+}
+
+.artwork-detail-img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 700px;
+  border-radius: 12px;
+  margin: 0 auto 28px;
+  display: block;
+}
+
+.artwork-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.artwork-title-row h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-color);
+}
+
+.artwork-year {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+.artwork-meta {
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 24px 0;
+  margin-bottom: 28px;
+}
+
+.artist-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 16px;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 24px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.meta-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+.meta-value {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-color);
+  opacity: 0.85;
+}
+
+@media (max-width: 550px) {
+  .meta-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.artwork-section {
+  margin-bottom: 28px;
+}
+
+.artwork-section h2 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+
+.artwork-section p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-color);
+  opacity: 0.85;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-color);
+  text-decoration: none;
+  opacity: 0.7;
+  margin-top: 12px;
+}
+
+.back-link:hover {
+  opacity: 1;
+}
+
+@media (max-width: 550px) {
+  .artwork-detail {
+    padding: 30px 20px 60px;
+  }
+
+  .artwork-title-row h1 {
+    font-size: 24px;
+  }
+}
