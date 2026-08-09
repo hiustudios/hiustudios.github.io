@@ -1,68 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gallery</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="home.css">
-<link rel="stylesheet" href="gallery.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="gallery.css">
 </head>
+
 <body>
+    <div id="navbar-placeholder"></div>
+    <main>
 
-<nav class="navbar">
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
+        <section class="gallery-header">
+            <h1>Gallery</h1>
+            <p>A collection of work from our community of artists.</p>
+        </section>
 
-<button id="theme-toggle" aria-label="Toggle theme">
-<span class="icon">🌙</span>
-</button>
-</nav>
+        <section class="gallery-search">
+            <input type="text" id="searchInput" placeholder="Search artwork..." class="search-bar">
+        </section>
 
-<main>
+        <section class="gallery-grid" id="galleryGrid">
+            <a href="burungjalakbali.html" class="gallery-item" data-title="burungjalakbali">
+                <img src="burungjalakbali.jpg" alt="Burung Jalak Bali">
+                <h3>Burung Jalak Bali</h3>
+            </a>
+            <a href="jiufen.html" class="gallery-item" data-title="Jiufenoldstreet">
+                <img src="jiufen.jpg" alt="Jiufen Old Street">
+                <h3>Jiufen Old Street</h3>
+            </a>
+            <a href="fuji.html" class="gallery-item" data-title="Fuji">
+                <img src="fuji.jpg" alt="Fuji">
+                <h3>Fuji</h3>
+            </a>
+        </section>
+        <p id="noResults" class="no-results" hidden>No artwork found.</p>
+        <div class="pagination-wrapper" id="paginationWrapper"></div>
+    </main>
+    <footer class="site-footer">
+        &copy; 2026 hiu. All rights reserved.
+    </footer>
 
-<section class="gallery-header">
-<h1>Gallery</h1>
-<p>A collection of work from our community of artists.</p>
-</section>
-
-<section class="gallery-search">
-<input type="text" id="searchInput" placeholder="Search artwork..." class="search-bar">
-</section>
-
-<section class="gallery-grid" id="galleryGrid">
-
-<a href="burungjalakbali.html" class="gallery-item" data-title="burungjalakbali">
-<img src="burungjalakbali.jpg" alt="Burung Jalak Bali">
-<h3>Burung Jalak Bali</h3>
-</a>
-
-<a href="jiufen.html" class="gallery-item" data-title="Jiufenoldstreet">
-<img src="jiufen.jpg" alt="Jiufen Old Street">
-<h3>Jiufen Old Street</h3>
-</a>
-
-<a href="fuji.html" class="gallery-item" data-title="Fuji">
-<img src="fuji.jpg" alt="Fuji">
-<h3>Fuji</h3>
-</a>
-
-</section>
-
-<p id="noResults" class="no-results" hidden>No artwork found.</p>
-
-</main>
-
-<footer class="site-footer">
-&copy; 2026 hiu. All rights reserved.
-</footer>
-
-<script src="theme.js"></script>
-<script src="gallery.js"></script>
+    <script src="navbar.js"></script>
+    <script src="theme.js"></script>
+    <script src="gallery.js"></script>
 </body>
+
 </html>

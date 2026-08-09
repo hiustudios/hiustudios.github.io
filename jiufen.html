@@ -1,84 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jiufen Old Street</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="home.css">
-<link rel="stylesheet" href="gallery.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiufen Old Street</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="gallery.css">
 </head>
+
 <body>
 
-<nav class="navbar">
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
+    <div id="navbar-placeholder"></div>
 
-<button id="theme-toggle" aria-label="Toggle theme">
-<span class="icon">🌙</span>
-</button>
-</nav>
+    <main class="artwork-detail">
 
-<main class="artwork-detail">
+        <img src="jiufen.jpg" alt="Jiufen Old Street" class="artwork-detail-img">
 
-<img src="jiufen.jpg" alt="Jiufen Old Street" class="artwork-detail-img">
+        <div class="artwork-title-row">
+            <h1>Jiufen Old Street</h1>
+            <span class="artwork-year">2026</span>
+        </div>
 
-<div class="artwork-title-row">
-<h1>Jiufen Old Street</h1>
-<span class="artwork-year">2026</span>
-</div>
+        <div class="artwork-meta">
+            <p class="artist-name">Kennard Alvaro Hadinata</p>
 
-<div class="artwork-meta">
-<p class="artist-name">Kennard Alvaro Hadinata</p>
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <span class="meta-label">Born</span>
+                    <span class="meta-value">2008</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">From</span>
+                    <span class="meta-value">Surabaya, Indonesia</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Medium</span>
+                    <span class="meta-value">Ink on paper</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Dimensions</span>
+                    <span class="meta-value">60 x 80 cm</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Status</span>
+                    <span class="meta-value">Not For Sale</span>
+                </div>
+            </div>
+        </div>
 
-<div class="meta-grid">
-<div class="meta-item">
-<span class="meta-label">Born</span>
-<span class="meta-value">2008</span>
-</div>
-<div class="meta-item">
-<span class="meta-label">From</span>
-<span class="meta-value">Surabaya, Indonesia</span>
-</div>
-<div class="meta-item">
-<span class="meta-label">Medium</span>
-<span class="meta-value">Ink on paper</span>
-</div>
-<div class="meta-item">
-<span class="meta-label">Dimensions</span>
-<span class="meta-value">60 x 80 cm</span>
-</div>
-<div class="meta-item">
-<span class="meta-label">Status</span>
-<span class="meta-value">Not For Sale</span>
-</div>
-</div>
-</div>
+        <div class="artwork-section">
+            <h2>About the Artwork</h2>
+            <p>This is a painting of a town called Jiufen. It's located in Taiwan and is especially beautiful at night
+                because of its many bright lanterns.
+                These features make it look like it's from studio ghibli's movie, "Spirited Away", hence the many
+                references in the painting.</p>
+        </div>
 
-<div class="artwork-section">
-<h2>About the Artwork</h2>
-<p>This is a painting of a town called Jiufen. It's located in Taiwan and is especially beautiful at night because of its many bright lanterns. 
-    These features make it look like it's from studio ghibli's movie, "Spirited Away", hence the many references in the painting.</p>
-</div>
+        <div class="artwork-section">
+            <h2>About the Artist</h2>
+            <p>Kennard is an artist who loves cats.</p>
+        </div>
 
-<div class="artwork-section">
-<h2>About the Artist</h2>
-<p>Kennard is an artist who loves cats.</p>
-</div>
+        <a href="gallery.html" class="back-link">&larr; Back to Gallery</a>
 
-<a href="gallery.html" class="back-link">&larr; Back to Gallery</a>
+    </main>
 
-</main>
+    <footer class="site-footer">
+        &copy; 2026 hiu. All rights reserved.
+    </footer>
 
-<footer class="site-footer">
-&copy; 2026 hiu. All rights reserved.
-</footer>
-
-<script src="theme.js"></script>
+    <script src="navbar.js"></script>
+    <script src="theme.js"></script>
 </body>
+
 </html>
