@@ -7,11 +7,15 @@ const galleryGrid = document.getElementById('galleryGrid');
 const PAGE_SIZE = 3;
 let currentPage = 1;
 
+function getTitle(item) {
+  return item.querySelector('h3').textContent.toLowerCase();
+}
+
 function render() {
   const query = searchInput.value.toLowerCase().trim();
 
   const matchingItems = galleryItems.filter(item =>
-    item.getAttribute('data-title').toLowerCase().includes(query)
+    getTitle(item).includes(query)
   );
 
   const totalPages = Math.max(1, Math.ceil(matchingItems.length / PAGE_SIZE));
