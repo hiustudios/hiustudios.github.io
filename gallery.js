@@ -4,7 +4,7 @@ const noResults = document.getElementById('noResults');
 const paginationWrapper = document.getElementById('paginationWrapper');
 const galleryGrid = document.getElementById('galleryGrid');
 
-const PAGE_SIZE = 2;
+const PAGE_SIZE = 3;
 let currentPage = 1;
 
 function render() {
