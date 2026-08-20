@@ -1,65 +1,65 @@
 .contact-main {
   max-width: 700px;
-margin: 0 auto;
-padding: 60px 32px;
+  margin: 0 auto;
+  padding: 60px 32px;
 }
 
 .contact-main section {
-margin-bottom: 48px;
+  margin-bottom: 48px;
 }
 
 .contact-main h2 {
-font-size: 15px;
-font-weight: 700;
-letter-spacing: 1px;
-text-transform: uppercase;
-opacity: 0.6;
-margin-bottom: 16px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 16px;
 }
 
 .team-list {
-list-style: none;
+  list-style: none;
 }
 
 .team-list li {
-display: flex;
-justify-content: space-between;
-padding: 12px 0;
-border-bottom: 1px solid var(--border-color);
-font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 15px;
 }
 
 .team-role {
-opacity: 0.6;
+  opacity: 0.6;
 }
 
 .social-grid {
-display: flex;
-gap: 16px;
-flex-wrap: wrap;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 .social-card {
-display: flex;
-align-items: center;
-justify-content: center;
-width: 56px;
-height: 56px;
-background-color: var(--card-bg);
-border: 1px solid var(--border-color);
-border-radius: 50%;
-transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .social-card:hover {
-transform: translateY(-3px);
-box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 .social-logo {
-width: 26px;
-height: 26px;
-object-fit: contain;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
 }
 
 .why-hiu p {
@@ -69,6 +69,35 @@ object-fit: contain;
   margin-bottom: 14px;
 }
 
-.why-hiu p:last-child {
-  margin-bottom: 0;
+.why-hiu-img {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto 24px;
+}
+
+.why-hiu-media {
+  margin-top: 8px;
+}
+
+.why-hiu-hero-img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 16px;
+}
+
+.why-hiu-img-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.why-hiu-sq-img {
+  width: calc(50% - 8px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
 }
