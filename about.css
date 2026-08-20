@@ -73,6 +73,7 @@
   display: block;
   width: 100%;
   max-width: 280px;
+  height: auto;
   margin: 0 auto 24px;
 }
 
@@ -84,6 +85,7 @@
   display: block;
   width: 100%;
   max-width: 500px;
+  height: auto;
   margin: 0 auto 16px;
 }
 
@@ -97,7 +99,19 @@
 
 .why-hiu-sq-img {
   width: calc(50% - 8px);
+  min-width: 0;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 12px;
+}
+
+@media (max-width: 500px) {
+  .contact-main {
+    padding: 40px 20px;
+  }
+
+  .why-hiu-img,
+  .why-hiu-hero-img {
+    max-width: 100%;
+  }
 }
