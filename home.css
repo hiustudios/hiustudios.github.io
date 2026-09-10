@@ -139,7 +139,7 @@ opacity: 0.6;
 display: inline-block;
 margin-top: 24px;
 padding: 13px 30px;
-background-color: var(--text-color);
+background-color: #43a9ab;
 color: var(--bg-color);
 border-radius: 999px;
 font-family: 'Lato', sans-serif;
@@ -242,6 +242,7 @@ padding: 30px 0 40px;
   }
 }
 
-.blue {
-    color: #8ea2fb
+.hiu-text {
+    color: #8ea2fb;
+    font-weight: bold;
 }
