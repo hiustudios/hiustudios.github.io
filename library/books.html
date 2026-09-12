@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../home.css">
+<link rel="stylesheet" href="books.css">
+</head>
+
+<body>
+<div id="navbar-placeholder"></div>
+<main>
+
+<section class="library-header">
+<h1>Library</h1>
+<p>Explore our collection of books and resources.</p>
+</section>
+
+<section class="library-search">
+<input type="text" id="searchInput" placeholder="Search by title or author..." class="search-bar">
+</section>
+
+<section class="library-grid" id="libraryGrid"></section>
+<p id="noResults" class="no-results" hidden>No books found.</p>
+<div class="pagination-wrapper" id="paginationWrapper"></div>
+</main>
+<footer class="site-footer">
+&copy; 2026 hiu. All rights reserved.
+</footer>
+
+<script src="../navbar.js"></script>
+<script src="../theme.js"></script>
+<script src="library.js"></script>
+</body>
+
+</html>

@@ -1,43 +1,47 @@
+let allBooks = [];
+let currentPage = 1;
+const PAGE_SIZE = 6;
+
 const searchInput = document.getElementById('searchInput');
-const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+const libraryGrid = document.getElementById('libraryGrid');
 const noResults = document.getElementById('noResults');
 const paginationWrapper = document.getElementById('paginationWrapper');
-const galleryGrid = document.getElementById('galleryGrid');
 
-const PAGE_SIZE = 3;
-let currentPage = 1;
-
-function getTitle(item) {
-  return item.querySelector('h3').textContent.toLowerCase();
+async function loadLibrary() {
+  const res = await fetch('library.json');
+  allBooks = await res.json();
+  render();
 }
 
 function render() {
   const query = searchInput.value.toLowerCase().trim();
 
-  const matchingItems = galleryItems.filter(item =>
-    getTitle(item).includes(query)
+  const matching = allBooks.filter(book =>
+    book.title.toLowerCase().includes(query) ||
+    book.author.toLowerCase().includes(query)
   );
 
-  const totalPages = Math.max(1, Math.ceil(matchingItems.length / PAGE_SIZE));
+  const totalPages = Math.max(1, Math.ceil(matching.length / PAGE_SIZE));
   if (currentPage > totalPages) currentPage = totalPages;
 
   const start = (currentPage - 1) * PAGE_SIZE;
-  const end = start + PAGE_SIZE;
+  const pageItems = matching.slice(start, start + PAGE_SIZE);
 
-  galleryItems.forEach(item => {
-    const isMatch = matchingItems.includes(item);
-    const isOnPage = isMatch && matchingItems.indexOf(item) >= start && matchingItems.indexOf(item) < end;
-    item.style.display = isOnPage ? '' : 'none';
-  });
+  libraryGrid.innerHTML = pageItems.map(book => `
+    <a href="book.html?id=${book.id}" class="book-item">
+      <img src="${book.cover}" alt="${book.title}">
+      <h3>${book.title}</h3>
+      <p class="book-author">${book.author}</p>
+    </a>
+  `).join('');
 
-  noResults.hidden = matchingItems.length !== 0;
+  noResults.hidden = matching.length !== 0;
 
-  renderPagination(totalPages, matchingItems.length);
+  renderPagination(totalPages, matching.length);
 }
 
 function renderPagination(totalPages, resultCount) {
   paginationWrapper.innerHTML = '';
-
   if (totalPages <= 1 || resultCount === 0) return;
 
   const prevBtn = document.createElement('button');
@@ -66,7 +70,7 @@ function renderPagination(totalPages, resultCount) {
 function goToPage(page) {
   currentPage = page;
   render();
-  galleryGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  libraryGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 searchInput.addEventListener('input', () => {
@@ -74,4 +78,4 @@ searchInput.addEventListener('input', () => {
   render();
 });
 
-render();
+loadLibrary();

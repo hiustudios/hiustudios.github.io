@@ -1,0 +1,18 @@
+[
+  {
+    "id": "wildrobot",
+    "title": "The Wild Robot on the Island",
+    "author": "Peter Brown",
+    "cover": "thewildrobot.jpg",
+    "category": "fiction",
+    "description": "The Wild Robot on the Island by Peter Brown is a beautifully illustrated picture book adaptation that follows a robot named Roz who washes ashore on a remote, untamed island after a shipwreck."
+  },
+  {
+    "id": "anotherbook",
+    "title": "Another Book",
+    "author": "Another Author",
+    "cover": "anotherbook.jpg",
+    "category": "art",
+    "description": "Short description here."
+  }
+]
