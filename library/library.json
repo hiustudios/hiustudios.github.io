@@ -4,15 +4,47 @@
     "title": "The Wild Robot on the Island",
     "author": "Peter Brown",
     "cover": "thewildrobot.jpg",
-    "category": "fiction",
+    "category": "Fiction",
     "description": "The Wild Robot on the Island by Peter Brown is a beautifully illustrated picture book adaptation that follows a robot named Roz who washes ashore on a remote, untamed island after a shipwreck."
   },
   {
-    "id": "anotherbook",
-    "title": "Another Book",
-    "author": "Another Author",
-    "cover": "anotherbook.jpg",
-    "category": "art",
-    "description": "Short description here."
+    "id": "littleprince",
+    "title": "The Little Prince",
+    "author": "Antoine de Saint-Exupéry",
+    "cover": "thelittleprince.jpg",
+    "category": "Fiction",
+    "description": "The Little Prince by Antoine de Saint-Exupery is a philosophical and allegorical tale about a young prince who travels from planet to planet, meeting various inhabitants and learning about the complexities of life, love and human nature."
+  },
+  {
+    "id": "worldofart",
+    "title": "A World of Art",
+    "author": "James Brown & Helena Hunt",
+    "cover": "aworldofart.jpg",
+    "category": "Art",
+    "description": "A gorgeously illustrated and engaging guide to the world of art. Immerse yourself in the amazing world of art in this beautiful book with text by Helena Hunt, stylishly illustrated by the inimitable print-maker James Brown."
+  },
+  {
+    "id": "drawntothegarden",
+    "title": "Drawn to the Garden",
+    "author": "Caroline Quentin",
+    "cover": "drawntothegarden.jpg",
+    "category": "Gardening",
+    "description": "A gorgeously illustrated and engaging guide to the world of art. Immerse yourself in the amazing world of art in this beautiful book with text by Helena Hunt, stylishly illustrated by the inimitable print-maker James Brown."
+  },
+  {
+    "id": "materialmatters",
+    "title": "Material Matters 03: Stone",
+    "author": "viction:ary",
+    "cover": "materialmatters.jpg",
+    "category": "Architecture",
+    "description": "Material Matters 03: Stone showcases stunning creative interpretations of the common material across a variety of mediums. From polishing different types of stone to produce elegant packaging design work to making crude moulds out of it in creating memorable shapes and forms, this edition explores the compelling ways with which the unique characteristics of stone can be cleverly drawn upon or manipulated to shape the outcome of a particular project, with insights into the key techniques featured."
+  },
+  {
+    "id": "paintwithoutabrush",
+    "title": "How to Paint Without a Brush: The Art of Red Hong Yi",
+    "author": "Red Hong Yi",
+    "cover": "paintwithoutabrush.jpg",
+    "category": "Art",
+    "description": "How to Paint Without a Brush introduces the artist’s creative process, the tools and methods she employs and the motivation behind her work. Organized by artistic medium, including eggshells, matchsticks, flowers, and ink stamps made from vegetables, Red’s book shares an array of creative techniques as well as stories from significant moments in her art career. Timely and inspiring, with its focus on nontraditional art-making methods using common household objects, this book features a do-it-yourself section suggesting several projects that readers can try at home to push their own creative boundaries."
   }
 ]

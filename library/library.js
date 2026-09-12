@@ -30,6 +30,7 @@ function render() {
   libraryGrid.innerHTML = pageItems.map(book => `
     <a href="book.html?id=${book.id}" class="book-item">
       <img src="${book.cover}" alt="${book.title}">
+      <span class="book-category">${book.category}</span>
       <h3>${book.title}</h3>
       <p class="book-author">${book.author}</p>
     </a>
