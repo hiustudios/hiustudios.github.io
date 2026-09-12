@@ -1,21 +1,23 @@
 const searchInput = document.getElementById('searchInput');
-const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
 const noResults = document.getElementById('noResults');
 const paginationWrapper = document.getElementById('paginationWrapper');
 const galleryGrid = document.getElementById('galleryGrid');
 
 const PAGE_SIZE = 6;
 let currentPage = 1;
+let galleryItems = [];
 
-function getTitle(item) {
-  return item.querySelector('h3').textContent.toLowerCase();
+function getSearchText(item) {
+  const title = item.querySelector('h3').textContent.toLowerCase();
+  const artist = item.querySelector('.gallery-artist').textContent.toLowerCase();
+  return title + ' ' + artist;
 }
 
 function render() {
   const query = searchInput.value.toLowerCase().trim();
 
   const matchingItems = galleryItems.filter(item =>
-    getTitle(item).includes(query)
+    getSearchText(item).includes(query)
   );
 
   const totalPages = Math.max(1, Math.ceil(matchingItems.length / PAGE_SIZE));
@@ -69,9 +71,26 @@ function goToPage(page) {
   galleryGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-searchInput.addEventListener('input', () => {
-  currentPage = 1;
-  render();
-});
+async function loadGallery() {
+  const res = await fetch('gallery.json');
+  const data = await res.json();
 
-render();
+  galleryGrid.innerHTML = data.map(item => `
+    <a href="artwork.html?id=${item.id}" class="gallery-item">
+      <img src="${item.cover}" alt="${item.title}">
+      <h3>${item.title}</h3>
+      <p class="gallery-artist">${item.artist}</p>
+    </a>
+  `).join('');
+
+  galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+
+  searchInput.addEventListener('input', () => {
+    currentPage = 1;
+    render();
+  });
+
+  render();
+}
+
+loadGallery();
