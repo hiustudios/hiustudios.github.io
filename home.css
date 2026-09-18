@@ -175,54 +175,90 @@ opacity: 0.85;
 transform: translateY(-2px);
 }
 
-/* ===== Offerings / Cards ===== */
+/* ===== Offerings carousel: one slide (image + text) per dot ===== */
+.offerings-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 0 20px;
+}
+
 .offerings {
-display: flex;
-gap: 20px;
-padding: 40px 0 60px;
-max-width: 1100px;
-margin: 0 auto;
-flex-wrap: wrap;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  user-select: none;
+}
+
+.offerings.dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+}
+
+.offerings::-webkit-scrollbar {
+  display: none;
 }
 
 .card {
-background-color: var(--card-bg);
-border: 1px solid var(--border-color);
-border-radius: 12px;
-padding: 0 0 24px;
-flex: 1 1 250px;
-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-transition: transform 0.2s ease, box-shadow 0.2s ease;
-overflow: hidden;
+  scroll-snap-align: start;
+  flex: 0 0 100%;
+  width: 100%;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 0 0 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
 }
 
 .card-img {
-width: 100%;
-height: 160px;
-object-fit: cover;
-display: block;
-margin-bottom: 16px;
-}
-
-.card:hover {
-transform: translateY(-3px);
-box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 16px;
+  pointer-events: none;
 }
 
 .card h3 {
-font-size: 17px;
-font-weight: 700;
-margin-bottom: 8px;
-color: var(--text-color);
-padding: 0 24px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-color);
+  padding: 0 28px;
 }
 
 .card p {
-font-size: 14px;
-line-height: 1.6;
-color: var(--text-color);
-opacity: 0.75;
-padding: 0 24px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-color);
+  opacity: 0.75;
+  padding: 0 28px;
+  max-width: 600px;
+}
+
+.offerings-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px 0 20px;
+}
+
+.offerings-dots .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--border-color);
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.offerings-dots .dot.active {
+  background-color: #43a9ab;
+  transform: scale(1.2);
 }
 
 /* ===== Footer ===== */
@@ -257,8 +293,8 @@ margin-left: auto;
 margin-right: auto;
   }
 
-.offerings {
-padding: 30px 0 40px;
+.card-img {
+height: 280px;
   }
 }
 
