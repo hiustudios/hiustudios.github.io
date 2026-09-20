@@ -1,0 +1,241 @@
+/* ===== News header ===== */
+.news-header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 32px 10px;
+  text-align: center;
+}
+
+.news-header h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.news-header p {
+  font-size: 15px;
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+/* ===== Search bar ===== */
+.news-search {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px 32px 30px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.search-bar::placeholder {
+  color: var(--text-color);
+  opacity: 0.4;
+}
+
+.search-bar:focus {
+  border-color: var(--text-color);
+}
+
+/* ===== News grid ===== */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 32px 60px;
+}
+
+.news-card {
+  text-decoration: none;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.news-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.news-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-color);
+  padding: 16px 20px 4px;
+}
+
+.news-card .news-card-date {
+  font-size: 13px;
+  color: var(--text-color);
+  opacity: 0.6;
+  padding: 0 20px 16px;
+}
+
+.no-results {
+  text-align: center;
+  font-size: 15px;
+  color: var(--text-color);
+  opacity: 0.6;
+  padding: 0 32px 60px;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 900px) {
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 550px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+    padding: 10px 20px 40px;
+  }
+
+  .news-header {
+    padding: 40px 20px 10px;
+  }
+
+  .news-header h1 {
+    font-size: 28px;
+  }
+
+  .news-search {
+    padding: 10px 20px 20px;
+  }
+}
+
+/* ===== Article detail page ===== */
+.article-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 32px 80px;
+}
+
+.article-detail-img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 700px;
+  margin: 0 auto 28px;
+  display: block;
+}
+
+.article-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.article-title-row h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-color);
+}
+
+.article-date {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+.article-section {
+  margin-bottom: 28px;
+}
+
+.article-section p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-color);
+  opacity: 0.85;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-color);
+  text-decoration: none;
+  opacity: 0.7;
+  margin-top: 12px;
+}
+
+.back-link:hover {
+  opacity: 1;
+}
+
+@media (max-width: 550px) {
+  .article-detail {
+    padding: 30px 20px 60px;
+  }
+
+  .article-title-row h1 {
+    font-size: 24px;
+  }
+}
+
+/* ===== Pagination ===== */
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 32px 60px;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1.5px solid var(--border-color);
+  border-radius: 999px;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.page-btn:hover:not(:disabled) {
+  background-color: rgba(128, 128, 128, 0.08);
+}
+
+.page-btn.active {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border-color: var(--text-color);
+}
+
+.page-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
