@@ -32,7 +32,7 @@ transition: background-color 0.2s ease, color 0.2s ease;
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: clamp(12px, 2.5vw, 16px) clamp(16px, 4vw, 32px);
+padding: 14px 20px;
 gap: 12px;
 flex-wrap: nowrap;
 }
@@ -40,23 +40,15 @@ flex-wrap: nowrap;
 .nav-links {
 display: flex;
 list-style: none;
-gap: clamp(12px, 3vw, 32px);
+gap: 20px;
 flex-wrap: nowrap;
-overflow-x: auto;
-scrollbar-width: none;
--webkit-overflow-scrolling: touch;
-min-width: 0;
-}
-
-.nav-links::-webkit-scrollbar {
-display: none;
 }
 
 .nav-links a {
 color: var(--text-color);
 text-decoration: none;
 font-weight: 500;
-font-size: clamp(13px, 2.2vw, 17px);
+font-size: 15px;
 letter-spacing: 0.3px;
 white-space: nowrap;
 }
@@ -69,9 +61,9 @@ opacity: 0.7;
 background: none;
 border: none;
 border-radius: 50%;
-width: clamp(36px, 8vw, 44px);
-height: clamp(36px, 8vw, 44px);
-font-size: clamp(15px, 3vw, 18px);
+width: 40px;
+height: 40px;
+font-size: 17px;
 cursor: pointer;
 display: flex;
 align-items: center;
@@ -82,6 +74,27 @@ flex-shrink: 0;
 
 #theme-toggle:hover {
 background-color: rgba(128, 128, 128, 0.1);
+}
+
+@media (min-width: 700px) {
+.navbar {
+padding: 16px 32px;
+gap: 16px;
+}
+
+.nav-links {
+gap: 32px;
+}
+
+.nav-links a {
+font-size: 17px;
+}
+
+#theme-toggle {
+width: 44px;
+height: 44px;
+font-size: 18px;
+}
 }
 
 /* ===== Main content ===== */
