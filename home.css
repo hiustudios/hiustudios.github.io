@@ -34,14 +34,21 @@ justify-content: space-between;
 align-items: center;
 padding: 16px 32px;
 gap: 16px;
-flex-wrap: wrap;
+flex-wrap: nowrap;
 }
 
 .nav-links {
 display: flex;
 list-style: none;
 gap: 32px;
-flex-wrap: wrap;
+flex-wrap: nowrap;
+overflow-x: auto;
+scrollbar-width: none;
+-webkit-overflow-scrolling: touch;
+}
+
+.nav-links::-webkit-scrollbar {
+display: none;
 }
 
 .nav-links a {
