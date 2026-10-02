@@ -10,6 +10,9 @@
   --text-color: #111111;
   --card-bg: #ffffff;
   --border-color: rgba(128, 128, 128, 0.15);
+  --nav-bg: #a1cbf1;
+  --nav-text: #111111;
+  --nav-hover-bg: rgba(0, 0, 0, 0.1);
 }
 
 html[data-theme="dark"] {
@@ -17,6 +20,9 @@ html[data-theme="dark"] {
   --text-color: #ffffff;
   --card-bg: #1a1a1a;
   --border-color: rgba(255, 255, 255, 0.12);
+  --nav-bg: #43a9ab;
+  --nav-text: #ffffff;
+  --nav-hover-bg: rgba(255, 255, 255, 0.2);
 }
 
 body {
@@ -35,28 +41,29 @@ body {
   padding: 14px 20px;
   gap: 12px;
   flex-wrap: nowrap;
+  background-color: var(--nav-bg);
+  transition: background-color 0.2s ease;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 14px;
   flex-wrap: nowrap;
 }
 
 .nav-links a {
-  color: var(--text-color);
+  color: var(--nav-text);
   text-decoration: none;
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 0.3px;
   white-space: nowrap;
+  transition: opacity 0.2s ease;
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 2px;
+  opacity: 0.75;
 }
 
 #theme-toggle {
@@ -70,12 +77,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-color);
+  color: var(--nav-text);
   flex-shrink: 0;
 }
 
 #theme-toggle:hover {
-  background-color: rgba(128, 128, 128, 0.1);
+  background-color: var(--nav-hover-bg);
 }
 
 @media (min-width: 700px) {
@@ -85,7 +92,7 @@ body {
   }
 
   .nav-links {
-    gap: 32px;
+    gap: 24px;
   }
 
   .nav-links a {
